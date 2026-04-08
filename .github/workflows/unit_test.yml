@@ -18,6 +18,6 @@ jobs:
           echo FLASK_DEBUG=1 >> .env
           echo FLASK_APP=run.py >> .env
       - name: Building containers
-        run: docker-compose build
+        run: docker compose build
       - name: Run tests
-        run: docker-compose up --abort-on-container-exit test-runner
+        run: docker compose up --abort-on-container-exit test-runner
